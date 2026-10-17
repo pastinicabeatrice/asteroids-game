@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    position: relative;
+}
+
+#gameArea {
+    background-color: #000;
+    border: 2px solid #333;
+}
+
+.game-ui {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.touch-controls {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.movement-pad button, .action-buttons button {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    touch-action: manipulation;
+}
+
+.movement-pad {
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+}
+
+#upBtn { grid-area: 1 / 2 / 2 / 3; }
+#leftBtn { grid-area: 2 / 1 / 3 / 2; }
+#rightBtn { grid-area: 2 / 3 / 3 / 4; }
+#downBtn { grid-area: 3 / 2 / 4 / 3; }
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
